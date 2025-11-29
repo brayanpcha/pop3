@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - SKY POP | Algodones de Azúcar y Crispetas</title>
+    <meta name="description" content="Contáctanos para pedidos, cotizaciones o cualquier consulta. Estamos aquí para endulzar tus eventos en Villavicencio y todo el Meta.">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <style>
+        .contact-page {
+            padding: 4rem 0;
+            background-color: var(--cream-50);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-method:hover {
+            border-color: var(--pink-300);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--pastel-pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: white;
+        }
+
+        .contact-details h3 {
+            margin: 0 0 0.25rem 0;
+            color: var(--gray-800);
+            font-size: 1.1rem;
+        }
+
+        .contact-details p {
+            margin: 0;
+            color: var(--gray-600);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--pink-500);
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--pink-500);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: var(--pink-600);
+        }
+
+        .map-section {
+            margin-top: 3rem;
+            grid-column: 1 / -1;
+        }
+
+        .map-placeholder {
+            background: var(--gray-100);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            color: var(--gray-600);
+        }
+
+        .business-hours {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--pastel-yellow);
+            border-radius: 0.5rem;
+        }
+
+        .hours-title {
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 1rem;
+        }
+
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-page {
+                padding: 2rem 0;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="../images/imagelogo.jpg" alt="SKY POP Logo" class="logo-image">
+                    <span class="logo-text">SKY POP</span>
+                </a>
+            </div>
+
+            <div class="nav-menu desktop-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="catalog.html" class="nav-link">Catálogo</a>
+                <a href="quote.html" class="nav-link">Cotiza tu Evento</a>
+                <a href="jobs.html" class="nav-link">Trabaja con Nosotros</a>
+                <a href="contact.html" class="nav-link active">Contacto</a>
+                
+                <button class="cart-btn desktop-cart-btn" id="open-cart-btn">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count-desktop">0</span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-container">
+                <button class="cart-btn mobile-cart-btn" id="open-cart-btn-mobile">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count-mobile">0</span>
+                </button>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg class="menu-icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-dropdown" id="mobile-menu">
+            <a href="../index.html" class="mobile-nav-link">Inicio</a>
+            <a href="catalog.html" class="mobile-nav-link">Catálogo</a>
+            <a href="quote.html" class="mobile-nav-link">Cotiza tu Evento</a>
+            <a href="jobs.html" class="mobile-nav-link">Trabaja con Nosotros</a>
+            <a href="contact.html" class="mobile-nav-link active">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="contact-page">
+        <div class="container">
+            <div class="contact-header">
+                <h1 class="section-title">Contáctanos</h1>
+                <p class="catalog-description">
+                    Estamos aquí para ayudarte. Escríbenos para pedidos, cotizaciones o cualquier consulta.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Información de contacto -->
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--pastel-purple);">Nuestros Canales</h2>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/573223428970" class="contact-method" target="_blank">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>WhatsApp</h3>
+                                <p>+57 322 342 8970</p>
+                                <p style="font-size: 0.9rem; color: var(--gray-500);">Respuesta inmediata</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/golosinasjp?igsh=MXFvYXp0Y3NoeDFyZg==" class="contact-method" target="_blank">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Instagram</h3>
+                                <p>@golosinasjp</p>
+                                <p style="font-size: 0.9rem; color: var(--gray-500);">Síguenos para novedades</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:golosinasjp@gmail.com" class="contact-method">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>golosinasjp@gmail.com</p>
+                                <p style="font-size: 0.9rem; color: var(--gray-500);">Respuesta en 24h</p>
+                            </div>
+                        </a>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Ubicación</h3>
+                                <p>Villavicencio, Meta</p>
+                                <p style="font-size: 0.9rem; color: var(--gray-500);">Servicio en toda la región</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Horario de atención -->
+                    <div class="business-hours">
+                        <h4 class="hours-title">Horario de Atención</h4>
+                        <ul class="hours-list">
+                            <li>
+                                <span>Lunes - Viernes</span>
+                                <span>8:00 AM - 6:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Sábados</span>
+                                <span>9:00 AM - 4:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Domingos</span>
+                                <span>10:00 AM - 2:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--pastel-purple);">Envíanos un Mensaje</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-name">Nombre completo *</label>
+                            <input type="text" id="contact-name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Correo electrónico</label>
+                            <input type="email" id="contact-email" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-phone">Teléfono *</label>
+                            <input type="tel" id="contact-phone" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-subject">Asunto *</label>
+                            <select id="contact-subject" class="form-select" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="cotizacion">Cotización de productos</option>
+                                <option value="evento">Cotización para evento</option>
+                                <option value="pedido">Realizar pedido</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="trabajo">Trabajar con nosotros</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">Mensaje *</label>
+                            <textarea id="contact-message" class="form-textarea" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Mapa (placeholder) -->
+            <div class="map-section">
+                <div class="map-placeholder">
+                    <h3 style="margin-bottom: 1rem; color: var(--pastel-purple);">Servicio en Villavicencio y Todo el Meta</h3>
+                    <p>Llevamos nuestra dulzura a toda la región. Contamos con servicio a domicilio y para eventos.</p>
+                    <p style="margin-top: 1rem; font-style: italic;">¡Donde haya una celebración, allí estaremos!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-overlay" class="cart-overlay">
+        <!-- Mismo contenido del carrito que en index.html -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Mismo contenido del footer que en index.html -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/cart-manager.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

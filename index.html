@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKY POP | Algodones de Azúcar y Crispetas para Eventos</title>
+    <meta name="description" content="SKY POP ofrece los mejores algodones de azúcar, crispetas de colores y snacks para fiestas infantiles, eventos escolares y empresariales. ¡Cotiza hoy!">
+    <meta name="keywords" content="algodón de azúcar, crispetas de colores, crispetas saladas, eventos escolares, fiestas infantiles, ferias empresariales, SKY POP, snacks para eventos">
+    <meta name="author" content="SKY POP">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/carousel.css">
+    <link rel="stylesheet" href="/css/product-card.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="../images/imagelogo.jpg" alt="SKY POP Logo" class="logo-image">
+                    <span class="logo-text">SKY POP</span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="nav-menu desktop-menu">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="skypop-website/catalog.html" class="nav-link">Catálogo</a>
+                <a href="skypop-website/quote.html" class="nav-link">Cotiza tu Evento</a>
+                <a href="skypop-website/jobs.html" class="nav-link">Trabaja con Nosotros</a>
+                <a href="skypop-website/contact.html" class="nav-link">Contacto</a>
+                
+                <!-- Cart Button Desktop -->
+                <button class="cart-btn desktop-cart-btn" id="open-cart-btn">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count-desktop">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-container">
+                <button class="cart-btn mobile-cart-btn" id="open-cart-btn-mobile">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count-mobile">0</span>
+                </button>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg class="menu-icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu-dropdown" id="mobile-menu">
+            <a href="index.html" class="mobile-nav-link active">Inicio</a>
+            <a href="skypop-website/catalog.html" class="mobile-nav-link">Catálogo</a>
+            <a href="skypop-website/quote.html" class="mobile-nav-link">Cotiza tu Evento</a>
+            <a href="skypop-website/jobs.html" class="mobile-nav-link">Trabaja con Nosotros</a>
+            <a href="skypop-website/contact.html" class="mobile-nav-link">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carousel-slides">
+                <!-- Slides se cargan dinámicamente -->
+            </div>
+
+            <!-- Controls -->
+            <div class="carousel-controls">
+                <button class="carousel-btn prev-btn" id="prev-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn next-btn" id="next-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators" id="carousel-indicators">
+                <!-- Indicators se cargan dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid" id="featured-products">
+                <!-- Productos se cargan dinámicamente -->
+            </div>
+            <div class="text-center">
+                <a href="catalog.html" class="btn-primary">Ver Catálogo Completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-overlay" class="cart-overlay">
+        <div class="cart-sidebar-container">
+            <div class="cart-sidebar">
+                <!-- Header -->
+                <div class="cart-header">
+                    <h2 class="cart-title">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        Tu Pedido
+                    </h2>
+                    <button class="cart-close-btn" id="close-cart-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Cart Content -->
+                <div class="cart-content">
+                    <div id="cart-empty" class="cart-empty">
+                        <svg class="icon icon-lg cart-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <p class="cart-empty-text">Tu carrito está vacío</p>
+                        <button class="back-to-catalog" id="back-to-catalog-btn">Volver al catálogo</button>
+                    </div>
+
+                    <ul id="cart-items-list" class="cart-items">
+                        <!-- Los elementos del carrito se añadirán dinámicamente aquí -->
+                    </ul>
+                </div>
+
+                <!-- Footer / Checkout -->
+                <div id="cart-footer" class="cart-footer">
+                    <div class="subtotal">
+                        <p>Subtotal</p>
+                        <p id="cart-total">$0</p>
+                    </div>
+                    
+                    <div class="conditions-warning">
+                        <p><strong>Nota:</strong> Pedido mínimo 12 unidades. Solicitudes con 2 días de anticipación.</p>
+                    </div>
+
+                    <div>
+                        <button class="checkout-btn" id="checkout-btn">
+                            Realizar Pedido por WhatsApp
+                        </button>
+                    </div>
+                    <div class="continue-shopping">
+                        <p>
+                            o <button class="continue-shopping-btn" id="continue-shopping-btn">Seguir Comprando</button>
+                        </p>
+                    </div>
+                    <div class="clear-cart">
+                        <button class="clear-cart-btn" id="clear-cart-btn">Vaciar carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                
+                <!-- Company Info -->
+                <div class="footer-section company-info">
+                    <h3 class="footer-title">SKY POP</h3>
+                    <p class="footer-tagline">"Siente el sabor del cielo y endulza tu alma"</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/golosinasjp?igsh=MXFvYXp0Y3NoeDFyZg==" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="mailto:golosinasjp@gmail.com" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section quick-links">
+                    <h4 class="footer-subtitle">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html" class="footer-link">Catálogo</a></li>
+                        <li><a href="quote.html" class="footer-link">Cotizar Evento</a></li>
+                        <li><a href="jobs.html" class="footer-link">Trabaja con Nosotros</a></li>
+                        <li><a href="contact.html" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section contact-info">
+                    <h4 class="footer-subtitle">Contáctanos</h4>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>3223428970</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>golosinasjp@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Villavicencio, Meta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> SKY POP. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/carousel.js"></script>
+    <script src="/js/cart-manager.js"></script>
+    <script src="/data/products.js"></script>
+</body>
+</html>

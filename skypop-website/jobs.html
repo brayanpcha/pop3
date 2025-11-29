@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - SKY POP | Algodones de Azúcar y Crispetas</title>
+    <meta name="description" content="Únete al equipo de SKY POP. Oportunidades de trabajo en ventas, atención al cliente y operaciones para personas apasionadas por la dulzura.">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <style>
+        .jobs-page {
+            padding: 4rem 0;
+            background-color: var(--cream-50);
+        }
+
+        .jobs-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .jobs-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .job-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        .positions-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .position-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--pastel-pink);
+        }
+
+        .position-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--pastel-purple);
+            margin-bottom: 1rem;
+        }
+
+        .position-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .position-requirements {
+            margin-bottom: 1.5rem;
+        }
+
+        .requirements-title {
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 0.5rem;
+        }
+
+        .requirements-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .requirements-list li {
+            padding: 0.25rem 0;
+            color: var(--gray-600);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .requirements-list li:before {
+            content: "•";
+            color: var(--pastel-pink);
+            font-weight: bold;
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        .apply-section {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .apply-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--pastel-purple);
+            margin-bottom: 1rem;
+        }
+
+        .apply-description {
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            background: var(--pink-500);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.2s;
+        }
+
+        .apply-btn:hover {
+            background: var(--pink-600);
+        }
+
+        .benefits-section {
+            margin: 3rem 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-title {
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-description {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .jobs-page {
+                padding: 2rem 0;
+            }
+
+            .position-card {
+                padding: 1.5rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="../images/imagelogo.jpg" alt="SKY POP Logo" class="logo-image">
+                    <span class="logo-text">SKY POP</span>
+                </a>
+            </div>
+
+            <div class="nav-menu desktop-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="catalog.html" class="nav-link">Catálogo</a>
+                <a href="quote.html" class="nav-link">Cotiza tu Evento</a>
+                <a href="jobs.html" class="nav-link active">Trabaja con Nosotros</a>
+                <a href="contact.html" class="nav-link">Contacto</a>
+                
+                <button class="cart-btn desktop-cart-btn" id="open-cart-btn">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count-desktop">0</span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-container">
+                <button class="cart-btn mobile-cart-btn" id="open-cart-btn-mobile">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count-mobile">0</span>
+                </button>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg class="menu-icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-dropdown" id="mobile-menu">
+            <a href="../index.html" class="mobile-nav-link">Inicio</a>
+            <a href="catalog.html" class="mobile-nav-link">Catálogo</a>
+            <a href="quote.html" class="mobile-nav-link">Cotiza tu Evento</a>
+            <a href="jobs.html" class="mobile-nav-link active">Trabaja con Nosotros</a>
+            <a href="contact.html" class="mobile-nav-link">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="jobs-page">
+        <div class="container">
+            <div class="jobs-header">
+                <h1 class="section-title">Trabaja con Nosotros</h1>
+            </div>
+
+            <div class="jobs-content">
+                <div class="job-intro">
+                    <p>En <strong>SKY POP</strong> creemos que el trabajo debe ser tan dulce como nuestros productos. 
+                    Buscamos personas apasionadas por crear momentos felices y que quieran crecer con nosotros 
+                    en este emocionante viaje lleno de sabor y color.</p>
+                </div>
+
+                <section class="benefits-section">
+                    <h2 class="section-title" style="font-size: 2rem;">¿Por qué trabajar con nosotros?</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🎯</div>
+                            <h3 class="benefit-title">Flexibilidad Horaria</h3>
+                            <p class="benefit-description">Adaptamos horarios según tus necesidades y disponibilidad</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">📈</div>
+                            <h3 class="benefit-title">Crecimiento Profesional</h3>
+                            <p class="benefit-description">Oportunidades de desarrollo y crecimiento dentro de la empresa</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🎉</div>
+                            <h3 class="benefit-title">Ambiente Divertido</h3>
+                            <p class="benefit-description">Trabajamos en eventos y celebraciones llenas de alegría</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">💰</div>
+                            <h3 class="benefit-title">Comisiones Atractivas</h3>
+                            <p class="benefit-description">Excelentes comisiones por ventas y referidos</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="positions-grid">
+                    <h2 class="section-title" style="font-size: 2rem;">Posiciones Disponibles</h2>
+                    
+                    <div class="position-card">
+                        <h3 class="position-title">Vendedor/a de Eventos</h3>
+                        <p class="position-description">
+                            Buscamos personas dinámicas y con don de gente para promocionar nuestros productos 
+                            en eventos y ferias. Ideal para estudiantes o personas que buscan ingresos adicionales.
+                        </p>
+                        
+                        <div class="position-requirements">
+                            <h4 class="requirements-title">Requisitos:</h4>
+                            <ul class="requirements-list">
+                                <li>Buen trato con el público</li>
+                                <li>Disponibilidad fines de semana</li>
+                                <li>Actitud positiva y proactiva</li>
+                                <li>Mayor de 18 años</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="position-card">
+                        <h3 class="position-title">Asistente de Producción</h3>
+                        <p class="position-description">
+                            Apoyo en la preparación de nuestros productos dulces. Perfecto para personas 
+                            detallistas y que disfruten trabajando en un ambiente creativo.
+                        </p>
+                        
+                        <div class="position-requirements">
+                            <h4 class="requirements-title">Requisitos:</h4>
+                            <ul class="requirements-list">
+                                <li>Meticulosidad y orden</li>
+                                <li>Disponibilidad en horarios flexibles</li>
+                                <li>Interés en la gastronomía</li>
+                                <li>Responsabilidad y puntualidad</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="position-card">
+                        <h3 class="position-title">Atención al Cliente</h3>
+                        <p class="position-description">
+                            Manejo de consultas por WhatsApp y redes sociales. Atención personalizada 
+                            a nuestros clientes y seguimiento de pedidos.
+                        </p>
+                        
+                        <div class="position-requirements">
+                            <h4 class="requirements-title">Requisitos:</h4>
+                            <ul class="requirements-list">
+                                <li>Excelente comunicación escrita</li>
+                                <li>Manejo de redes sociales</li>
+                                <li>Paciencia y empatía</li>
+                                <li>Disponibilidad horaria flexible</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="apply-section">
+                    <h2 class="apply-title">¿Te interesa unirte a nuestro equipo?</h2>
+                    <p class="apply-description">
+                        Envíanos tu información y nos pondremos en contacto contigo para contarte más 
+                        sobre las oportunidades disponibles.
+                    </p>
+                    <a href="#application-form" class="apply-btn">Aplicar Ahora</a>
+                </section>
+
+                <!-- Formulario de aplicación -->
+                <section id="application-form" style="margin-top: 4rem;">
+                    <div class="position-card">
+                        <h3 class="position-title" style="text-align: center;">Formulario de Aplicación</h3>
+                        <form id="job-application-form">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                                <div>
+                                    <label class="form-label" for="applicant-name">Nombre completo *</label>
+                                    <input type="text" id="applicant-name" class="form-input" required style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+                                </div>
+                                <div>
+                                    <label class="form-label" for="applicant-phone">Teléfono *</label>
+                                    <input type="tel" id="applicant-phone" class="form-input" required style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label class="form-label" for="applicant-email">Correo electrónico</label>
+                                <input type="email" id="applicant-email" class="form-input" style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label class="form-label" for="applicant-position">Posición de interés *</label>
+                                <select id="applicant-position" class="form-select" required style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+                                    <option value="">Selecciona una posición</option>
+                                    <option value="vendedor">Vendedor/a de Eventos</option>
+                                    <option value="produccion">Asistente de Producción</option>
+                                    <option value="atencion-cliente">Atención al Cliente</option>
+                                    <option value="otro">Otra</option>
+                                </select>
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label class="form-label" for="applicant-experience">Experiencia relevante</label>
+                                <textarea id="applicant-experience" class="form-textarea" placeholder="Cuéntanos sobre tu experiencia, estudios o por qué te interesa trabajar con nosotros..." style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem; min-height: 100px;"></textarea>
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label class="form-label" for="applicant-availability">Disponibilidad horaria *</label>
+                                <select id="applicant-availability" class="form-select" required style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+                                    <option value="">Selecciona tu disponibilidad</option>
+                                    <option value="fines-semana">Fines de semana</option>
+                                    <option value="entre-semana">Entre semana</option>
+                                    <option value="flexible">Horario flexible</option>
+                                    <option value="tiempo-completo">Tiempo completo</option>
+                                    <option value="medio-tiempo">Medio tiempo</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn" style="width: 100%; padding: 1rem; background: #ec4899; color: white; border: none; border-radius: 0.5rem; font-size: 1.1rem; font-weight: 600; cursor: pointer;">
+                                Enviar Aplicación
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-overlay" class="cart-overlay">
+        <!-- Mismo contenido del carrito que en index.html -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Mismo contenido del footer que en index.html -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/cart-manager.js"></script>
+    <script src="../js/jobs.js"></script>
+</body>
+</html>

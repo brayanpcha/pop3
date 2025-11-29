@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizar Evento - SKY POP | Algodones de Azúcar y Crispetas</title>
+    <meta name="description" content="Cotiza tu evento con SKY POP. Llevamos alegría y dulzura a fiestas infantiles, eventos escolares y empresariales.">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <style>
+        .quote-page {
+            padding: 4rem 0;
+            background-color: var(--cream-50);
+        }
+
+        .quote-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .quote-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--pink-500);
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .products-selection {
+            margin: 2rem 0;
+        }
+
+        .product-checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .product-checkbox:hover {
+            border-color: var(--pink-300);
+        }
+
+        .product-checkbox input {
+            margin-right: 0.75rem;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-name {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .product-price {
+            color: var(--pink-500);
+            font-weight: 600;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--pink-500);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: var(--pink-600);
+        }
+
+        .quote-info {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--gray-600);
+        }
+
+        @media (max-width: 768px) {
+            .quote-page {
+                padding: 2rem 0;
+            }
+
+            .quote-form {
+                padding: 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="../images/imagelogo.jpg" alt="SKY POP Logo" class="logo-image">
+                    <span class="logo-text">SKY POP</span>
+                </a>
+            </div>
+
+            <div class="nav-menu desktop-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="catalog.html" class="nav-link">Catálogo</a>
+                <a href="quote.html" class="nav-link active">Cotiza tu Evento</a>
+                <a href="jobs.html" class="nav-link">Trabaja con Nosotros</a>
+                <a href="contact.html" class="nav-link">Contacto</a>
+                
+                <button class="cart-btn desktop-cart-btn" id="open-cart-btn">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count-desktop">0</span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-container">
+                <button class="cart-btn mobile-cart-btn" id="open-cart-btn-mobile">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count-mobile">0</span>
+                </button>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg class="menu-icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-dropdown" id="mobile-menu">
+            <a href="../index.html" class="mobile-nav-link">Inicio</a>
+            <a href="catalog.html" class="mobile-nav-link">Catálogo</a>
+            <a href="quote.html" class="mobile-nav-link active">Cotiza tu Evento</a>
+            <a href="jobs.html" class="mobile-nav-link">Trabaja con Nosotros</a>
+            <a href="contact.html" class="mobile-nav-link">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="quote-page">
+        <div class="container">
+            <div class="quote-header">
+                <h1 class="section-title">Cotiza tu Evento</h1>
+                <p class="catalog-description">
+                    Completa el formulario y te contactaremos para ofrecerte la mejor experiencia dulce para tu evento.
+                </p>
+            </div>
+
+            <form class="quote-form" id="quote-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nombre completo *</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Teléfono *</label>
+                        <input type="tel" id="phone" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Correo electrónico</label>
+                    <input type="email" id="email" class="form-input">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="event-type">Tipo de evento *</label>
+                        <select id="event-type" class="form-select" required>
+                            <option value="">Selecciona un tipo</option>
+                            <option value="fiesta-infantil">Fiesta Infantil</option>
+                            <option value="evento-escolar">Evento Escolar</option>
+                            <option value="evento-empresarial">Evento Empresarial</option>
+                            <option value="boda">Boda</option>
+                            <option value="cumpleanos">Cumpleaños</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="guests">Número aproximado de invitados</label>
+                        <input type="number" id="guests" class="form-input" min="1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="event-date">Fecha del evento *</label>
+                        <input type="date" id="event-date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="event-time">Hora del evento</label>
+                        <input type="time" id="event-time" class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="event-location">Ubicación del evento</label>
+                    <input type="text" id="event-location" class="form-input" placeholder="Dirección o lugar del evento">
+                </div>
+
+                <div class="products-selection">
+                    <label class="form-label">Productos de interés</label>
+                    <div id="products-list">
+                        <!-- Los productos se cargan dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="special-requests">Solicitudes especiales o comentarios</label>
+                    <textarea id="special-requests" class="form-textarea" placeholder="Cuéntanos sobre tu evento, temas específicos, colores preferidos, etc."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Solicitar Cotización</button>
+                
+                <div class="quote-info">
+                    <p>Te contactaremos dentro de las próximas 24 horas para confirmar disponibilidad y precios.</p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-overlay" class="cart-overlay">
+        <!-- Mismo contenido del carrito que en index.html -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Mismo contenido del footer que en index.html -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/cart-manager.js"></script>
+    <script src="../data/products.js"></script>
+    <script src="../js/quote.js"></script>
+</body>
+</html>

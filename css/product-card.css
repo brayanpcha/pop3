@@ -1,0 +1,218 @@
+/* Product Card Styles */
+.product-card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+    position: relative;
+    height: 16rem;
+    overflow: hidden;
+    background-color: var(--gray-100);
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-image-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.product-card:hover .product-image-overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.product-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--gray-800);
+    margin: 0;
+}
+
+.product-price {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--pink-500);
+    background-color: var(--pink-50);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-left: 0.5rem;
+}
+
+.product-description {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+/* Options: Colors */
+.color-options {
+    margin-bottom: 1rem;
+}
+
+.color-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.color-selected {
+    font-weight: bold;
+    color: var(--pastel-purple);
+}
+
+.color-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.color-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--gray-200);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.color-btn.selected {
+    border-color: var(--gray-600);
+    transform: scale(1.1);
+}
+
+/* Options: Variants */
+.variant-options {
+    margin-bottom: 1rem;
+}
+
+.variant-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.variant-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    background-color: white;
+}
+
+.variant-select:focus {
+    outline: none;
+    border-color: var(--pink-500);
+    box-shadow: 0 0 0 2px var(--pink-500), 0 0 0 4px rgba(236, 72, 153, 0.1);
+}
+
+/* Action Buttons */
+.product-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.add-to-cart-btn {
+    background-color: var(--pastel-purple);
+    color: white;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #9c8ba3;
+}
+
+.whatsapp-btn {
+    border: 1px solid var(--green-500);
+    color: var(--green-600);
+    background-color: white;
+}
+
+.whatsapp-btn:hover {
+    background-color: var(--green-50);
+}
+
+.action-btn svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .product-image-container {
+        height: 12rem;
+    }
+    
+    .product-content {
+        padding: 1rem;
+    }
+    
+    .product-name {
+        font-size: 1.125rem;
+    }
+    
+    .product-price {
+        font-size: 1rem;
+    }
+    
+    .product-actions {
+        grid-template-columns: 1fr;
+    }
+}

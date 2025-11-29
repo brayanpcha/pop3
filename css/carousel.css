@@ -1,0 +1,168 @@
+/* Hero Carousel Styles */
+.hero-carousel {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.7s ease-out;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-content {
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+    max-width: 48rem;
+}
+
+.carousel-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Controls */
+.carousel-controls {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.carousel-btn {
+    pointer-events: auto;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-btn svg {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+/* Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.carousel-indicator {
+    transition: all 0.3s ease;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    opacity: 1;
+    padding: 0.25rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .hero-carousel {
+        height: 600px;
+    }
+    
+    .carousel-title {
+        font-size: 3.75rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-carousel {
+        height: 400px;
+    }
+    
+    .carousel-title {
+        font-size: 2.25rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .carousel-content {
+        padding: 0 0.5rem;
+    }
+    
+    .carousel-controls {
+        padding: 0.5rem;
+    }
+    
+    .carousel-btn svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
