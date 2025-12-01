@@ -30,7 +30,7 @@ window.PRODUCTS = [
         description: 'Presentación práctica y lista para llevar. Mantiene la frescura.',
         price: 3500,
         category: 'cotton',
-        image: './images/product-3.jpg',
+        image: '../images/vasoalgo.jpg',
         variants: [
             { name: 'Sin Sticker', price: 3500 },
             { name: 'Con Sticker Personalizado', price: 4000 }
@@ -66,16 +66,9 @@ window.PRODUCTS = [
         description: 'Brocheta de fresas con masmelos y baño de chocolate.',
         price: 2500,
         category: 'snack',
-        image: './images/product-7.jpg'
+        image: '../images/fresamas.jpg'
     },
-    {
-        id: 'combo-fiesta',
-        name: 'Combo Fiesta',
-        description: 'Paquete completo con algodón, crispetas y fresas con chocolate para tus eventos.',
-        price: 12000,
-        category: 'combo',
-        image: './images/product-8.jpg'
-    }
+    
 ];
 
 // Categorías para filtrado
@@ -85,4 +78,5 @@ window.PRODUCT_CATEGORIES = [
     { id: 'popcorn', name: 'Crispetas' },
     { id: 'snack', name: 'Snacks' },
     { id: 'combo', name: 'Combos' }
+
 ];
