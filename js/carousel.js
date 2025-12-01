@@ -5,21 +5,21 @@ const CAROUSEL_SLIDES = [
         title: "Momentos Dulces en Familia",
         subtitle: "Siente el sabor del cielo y endulza tu alma.",
         cta: "Ver Catálogo",
-        link: "catalog.html"
+        link: "../skypop-website/catalog.html"
     },
     {
         image: "../images/imagencris.jpg",
         title: "Crispetas de Colores",
         subtitle: "Elige tu color favorito y vive la magia.",
         cta: "Cotizar Evento",
-        link: "quote.html"
+        link: "../skypop-website/quote.html"
     },
     {
         image: "../images/imagenalgo.jpg",
         title: "Algodones Gigantes",
         subtitle: "Suavidad y sabor que impactan.",
         cta: "Pedir Ahora",
-        link: "catalog.html"
+        link: "../skypop-website/catalog.html"
     }
 ];
 
@@ -100,3 +100,4 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeCarousel();
     }
 });
+
