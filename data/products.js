@@ -30,7 +30,7 @@ window.PRODUCTS = [
         description: 'Presentación práctica y lista para llevar. Mantiene la frescura.',
         price: 3500,
         category: 'cotton',
-        image: '../images/vasoalgo.jpg',
+        image: '../images/vasoalgo.jpeg',
         variants: [
             { name: 'Sin Sticker', price: 3500 },
             { name: 'Con Sticker Personalizado', price: 4000 }
@@ -66,7 +66,7 @@ window.PRODUCTS = [
         description: 'Brocheta de fresas con masmelos y baño de chocolate.',
         price: 2500,
         category: 'snack',
-        image: '../images/fresamas.jpg'
+        image: '../images/fresamas.jpeg'
     },
     
 ];
@@ -80,3 +80,4 @@ window.PRODUCT_CATEGORIES = [
     { id: 'combo', name: 'Combos' }
 
 ];
+
